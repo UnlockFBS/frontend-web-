@@ -1,11 +1,6 @@
-const API_URL = "https://planning-backend.onrender.com"; // Remplace avec ton backend Render
+const API_URL = 'https://your-backend-api.com' // à adapter
 
-export async function getInterventions() {
-  try {
-    const response = await fetch(`${API_URL}/interventions`);
-    return await response.json();
-  } catch (error) {
-    console.error("Erreur API :", error);
-    return [];
-  }
+export async function fetchInterventions() {
+  const res = await fetch(`${API_URL}/interventions`)
+  return await res.json()
 }
